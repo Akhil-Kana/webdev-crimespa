@@ -100,7 +100,7 @@ function initializeCrimes() {
             neighborhoods.value = data;
         })
         .catch(error => {
-            console.log('Error fetching neighborhoods:' error);
+            console.log('Error fetching neighborhoods:', error);
         });
         //TODO: get initial 1000 crimes
 }
