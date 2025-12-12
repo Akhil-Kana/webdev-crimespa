@@ -37,6 +37,21 @@ let map = reactive(
         ]
     }
 );
+let show_new_incident_form = ref(false);
+let form_error = ref('');
+let form_success = ref('');
+let codes = ref([]);
+let neighborhoods = ref([]);
+let new_incident = reactive({
+    case_number: '',
+    date: '',
+    time: '',
+    code: '',
+    incident: '',
+    police_grid: '',
+    neighborhood_number: '',
+    block: ''
+});
 
 // Vue callback for once <template> HTML has been added to web page
 onMounted(() => {
@@ -70,11 +85,26 @@ onMounted(() => {
 // FUNCTIONS
 // Function called once user has entered REST API URL
 function initializeCrimes() {
-    // TODO: get code and neighborhood data
-    //       get initial 1000 crimes
+    fetch(crime_url.value + '/codes')
+        .then(response => response.json())
+        .then(data => {
+            codes.value = data;
+        })
+        .catch(error => {
+            console.log('Error fetching codes:', error);
+        });
+
+    fetch(crime_url.value + '/neighborhoods')
+        .then(response => response.json())
+        .then(data => {
+            neighborhoods.value = data;
+        })
+        .catch(error => {
+            console.log('Error fetching neighborhoods:' error);
+        });
+        //TODO: get initial 1000 crimes
 }
 
-// Function called when user presses 'OK' on dialog box
 function closeDialog() {
     let dialog = document.getElementById('rest-dialog');
     let url_input = document.getElementById('dialog-url');
@@ -87,6 +117,74 @@ function closeDialog() {
         dialog_err.value = true;
     }
 }
+
+function toggleNewIncidientForm() {
+    show_new_incident_form.value = !show_new_incident_form.value;
+    form_error.value = '';
+    form_success.value = '';
+
+    if (!show_new_incident_form) {
+        resetForm();
+    }
+}
+
+function resetForm() {
+    new_incident.case_number = '';
+    new_incident.date = '';
+    new_incident.time = '';
+    new_incident.code = '';
+    new_incident.incident = '';
+    new_incident.police_grid = '';
+    new_incident.neighborhood_number = '';
+    new_incident.block = '';
+}
+
+function submitNewIncident() {
+    form_error.value = '';
+    form_success.value = '';
+
+    if (!new_incident.case_number || !new_incident.date || !new_incident.time || 
+        !new_incident.code || !new_incident.incident || !new_incident.police_grid || 
+        !new_incident.neighborhood_number || !new_incident.block) {
+        form_error.value = 'Error: All fields must be filled out';
+        return;
+    }
+
+    fetch(crime_url.value + '/new-incident', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            case_number: new_incident.case_number,
+            date: new_incident.date,
+            time: new_incident.time,
+            code: parseInt(new_incident.code),
+            incident: new_incident.incident,
+            police_grid: parseInt(new_incident.police_grid),
+            neighborhood_number: parseInt(new_incident.neighborhood_number),
+            block: new_incident.block
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            return response.text().then(text => {
+                throw new Error(text);
+            });
+        }
+    })
+    .then(data => {
+        form_success.value = 'Incident added successfully!';
+        resetForm();
+        // TODO: Refresh the crime data/table here
+    })
+    .catch(error => {
+        form_error.value = 'Error: ' + error.message;
+    });
+}
+
 </script>
 
 <template>
@@ -98,6 +196,105 @@ function closeDialog() {
         <br/>
         <button class="button" type="button" @click="closeDialog">OK</button>
     </dialog>
+    <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="cell small-12">
+            <button class="button" type="button" @click="toggleNewIncidentForm">
+                {{ show_new_incident_form ? 'Close' : 'Add New Incident' }}
+            </button>
+        </div>
+    </div>
+
+    <!-- New Incident Form -->
+    <div v-if="show_new_incident_form" class="grid-x grid-padding-x" id="new-incident-form">
+        <div class="cell small-12">
+            <div class="callout">
+                <h3>Add New Crime Incident</h3>
+                
+                <div class="grid-x grid-padding-x">
+                    <div class="cell small-12 medium-6">
+                        <label>Case Number:
+                            <input type="text" v-model="new_incident.case_number" placeholder="e.g., 24-123456" required>
+                        </label>
+                    </div>
+                    
+                    <div class="cell small-12 medium-6">
+                        <label>Date:
+                            <input type="date" v-model="new_incident.date" required>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Time:
+                            <input type="time" v-model="new_incident.time" step="1" required>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Incident Code:
+                            <select v-model="new_incident.code" required>
+                                <option value="">Select a code</option>
+                                <option v-for="code in codes" :key="code.code" :value="code.code">
+                                    {{ code.code }} - {{ code.type }}
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Incident Description:
+                            <input type="text" v-model="new_incident.incident" placeholder="e.g., Theft" required>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Police Grid:
+                            <input type="number" v-model="new_incident.police_grid" placeholder="e.g., 123" required>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Neighborhood:
+                            <select v-model="new_incident.neighborhood_number" required>
+                                <option value="">Select a neighborhood</option>
+                                <option v-for="neighborhood in neighborhoods" :key="neighborhood.id" :value="neighborhood.id">
+                                    {{ neighborhood.id }} - {{ neighborhood.name }}
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12 medium-6">
+                        <label>Block/Address:
+                            <input type="text" v-model="new_incident.block" placeholder="e.g., 100 BLOCK OF MAIN ST" required>
+                        </label>
+                    </div>
+
+                    <div class="cell small-12">
+                        <button class="button success" type="button" @click="submitNewIncident">
+                            Submit Incident
+                        </button>
+                        <button class="button alert" type="button" @click="toggleNewIncidentForm">
+                            Cancel
+                        </button>
+                    </div>
+
+                    <div class="cell small-12" v-if="form_error">
+                        <div class="callout alert">
+                            {{ form_error }}
+                        </div>
+                    </div>
+
+                    <div class="cell small-12" v-if="form_success">
+                        <div class="callout success">
+                            {{ form_success }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="grid-container ">
         <div class="grid-x grid-padding-x">
             <div id="leafletmap" class="cell auto"></div>
@@ -133,5 +330,18 @@ function closeDialog() {
 .dialog-error {
     font-size: 1rem;
     color: #D32323;
+}
+
+#new-incident-form {
+    margin-bottom: 1rem;
+}
+
+#new-incident-form .callout {
+    background-color: #e6f2ff;
+}
+
+#new-incident-form h3 {
+    margin-bottom: 1rem;
+    color: #b477ffff;
 }
 </style>
