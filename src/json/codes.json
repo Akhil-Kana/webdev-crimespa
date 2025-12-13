@@ -1,0 +1,397 @@
+[
+  { "code": "100", "description": "HOMICIDE" },
+  { "code": "110", "description": "Murder, Non Negligent Manslaughter" },
+  { "code": "120", "description": "Murder, Manslaughter By Negligence" },
+  { "code": "210", "description": "Rape, By Force" },
+  { "code": "220", "description": "Rape, Attempt" },
+  { "code": "300", "description": "Robbery" },
+  { "code": "311", "description": "Robbery, Highway, Firearm" },
+  {
+    "code": "312",
+    "description": "Robbery, Highway, Knife or Cutting Instrument"
+  },
+  { "code": "313", "description": "Robbery, Highway, Other Dangerous Weapons" },
+  { "code": "314", "description": "Robbery, Highway, By Strong Arm" },
+  { "code": "321", "description": "Robbery, Commercial House, Firearm" },
+  {
+    "code": "322",
+    "description": "Robbery, Commercial House, Knife or Cutting Instrument"
+  },
+  {
+    "code": "323",
+    "description": "Robbery, Commercial House, Other Dangerous Weapons"
+  },
+  { "code": "324", "description": "Robbery, Commercial House, By Strong Arm" },
+  { "code": "331", "description": "Robbery, Service Station, Firearm" },
+  {
+    "code": "332",
+    "description": "ROBBERY-SERVICE STATION, KNIFE,CUTTING INSTRUMENT"
+  },
+  {
+    "code": "333",
+    "description": "Robbery, Service Station, Other Dangerous Weapons"
+  },
+  { "code": "334", "description": "Robbery, Service Station, By Strong Arm" },
+  { "code": "341", "description": "Robbery, Convenience Store, Firearm" },
+  {
+    "code": "342",
+    "description": "Robbery, Convenience Store, Knife or Cutting Instrument"
+  },
+  {
+    "code": "343",
+    "description": "Robbery, Convenience Store, Other Dangerous Weapons"
+  },
+  { "code": "344", "description": "Robbery, Convenience Store, By Strong Arm" },
+  { "code": "351", "description": "Robbery, Residence, Firearm" },
+  {
+    "code": "352",
+    "description": "Robbery, Residence, Knife or Cutting Instrument"
+  },
+  {
+    "code": "353",
+    "description": "Robbery, Residence, Other Dangerous Weapons"
+  },
+  { "code": "354", "description": "Robbery, Residence, By Strong Arm" },
+  { "code": "361", "description": "Robbery, Bank, Firearm" },
+  { "code": "362", "description": "ROBBERY-BANK,KNIFE,CUTTING INSTRUMENT" },
+  { "code": "363", "description": "Robbery, Bank, Other Dangerous Weapons" },
+  { "code": "364", "description": "Robbery, Bank, By Strong Arm" },
+  { "code": "371", "description": "Robbery, Misc., Firearm" },
+  {
+    "code": "372",
+    "description": "Robbery, Misc., Knife or Cutting Instrument"
+  },
+  { "code": "373", "description": "Robbery, Misc., Other Dangerous Weapons" },
+  { "code": "374", "description": "Robbery, Misc., By Strong Arm" },
+  { "code": "400", "description": "Aggravated Assault" },
+  { "code": "410", "description": "Aggravated Assault, Firearm" },
+  { "code": "411", "description": "Aggravated Assault, Domestic" },
+  { "code": "412", "description": "Aggravated Assault, Domestic" },
+  {
+    "code": "420",
+    "description": "Aggravated Assault, Knife or Cutting Instrument"
+  },
+  { "code": "421", "description": "Aggravated Assault, Domestic" },
+  { "code": "422", "description": "Aggravated Assault, Domestic" },
+  {
+    "code": "430",
+    "description": "Aggravated Assault, Other Dangerous Weapons"
+  },
+  { "code": "431", "description": "Aggravated Assault, Domestic" },
+  { "code": "432", "description": "Aggravated Assault, Domestic" },
+  { "code": "440", "description": "Aggravated Assault, Fists/Feet/Hands" },
+  { "code": "441", "description": "Aggravated Assault, Domestic" },
+  { "code": "442", "description": "Aggravated Assault, Domestic" },
+  { "code": "450", "description": "Aggravated Assault, Domestic" },
+  { "code": "451", "description": "Aggravated Assault, Domestic" },
+  { "code": "452", "description": "Aggravated Assault, Domestic" },
+  { "code": "453", "description": "Aggravated Assault, Domestic" },
+  { "code": "500", "description": "Burglary" },
+  { "code": "510", "description": "Burglary, Forced Entry, Night, Residence" },
+  {
+    "code": "511",
+    "description": "Burglary, Forced Entry, Night, Residence, Occupied"
+  },
+  { "code": "513", "description": "Burglary, Forced Entry, Night, Garage" },
+  { "code": "515", "description": "Burglary, Forced Entry, Night, Commercial" },
+  {
+    "code": "516",
+    "description": "Burglary, Forced Entry, Night, Commercial, Occupied"
+  },
+  {
+    "code": "520",
+    "description": "Burglary, No Forced Entry, Night, Residence"
+  },
+  {
+    "code": "521",
+    "description": "Burglary, No Forced Entry, Night, Residence, Occupied"
+  },
+  { "code": "523", "description": "Burglary, No Forced Entry, Night, Garage" },
+  {
+    "code": "525",
+    "description": "Burglary, No Forced Entry, Night, Commercial"
+  },
+  {
+    "code": "526",
+    "description": "Burglary, No Forced Entry, Night, Commercial, Occupied"
+  },
+  { "code": "530", "description": "Burglary, Forced Entry, Day, Residence" },
+  {
+    "code": "531",
+    "description": "Burglary, Forced Entry, Day, Residence, Occupied"
+  },
+  { "code": "533", "description": "Burglary, Forced Entry, Day, Garage" },
+  { "code": "535", "description": "Burglary, Forced Entry, Day, Commercial" },
+  {
+    "code": "536",
+    "description": "Burglary, Forced Entry, Day, Commercial, Occupied"
+  },
+  { "code": "540", "description": "Burglary, No Forced Entry, Day, Residence" },
+  {
+    "code": "541",
+    "description": "Burglary, No Forced Entry, Day, Residence, Occupied"
+  },
+  { "code": "543", "description": "Burglary, No Forced Entry, Day, Garage" },
+  {
+    "code": "545",
+    "description": "Burglary, No Forced Entry, Day, Commercial"
+  },
+  {
+    "code": "546",
+    "description": "Burglary, No Forced Entry, Day, Commercial, Occupied"
+  },
+  {
+    "code": "550",
+    "description": "Att. Burglary, Forced Entry, Night, Residence"
+  },
+  {
+    "code": "551",
+    "description": "Att. Burglary, Forced Entry, Night, Residence, Occupied"
+  },
+  {
+    "code": "553",
+    "description": "Att. Burglary, Forced Entry, Night, Garage"
+  },
+  {
+    "code": "555",
+    "description": "Att. Burglary, Forced Entry, Night, Commercial"
+  },
+  {
+    "code": "556",
+    "description": "Att. Burglary, Forced Entry, Night, Commercial, Occupied"
+  },
+  {
+    "code": "560",
+    "description": "Att. Burglary, Forced Entry, Day, Residence"
+  },
+  {
+    "code": "561",
+    "description": "Att. Burglary, Forced Entry, Day, Residence, Occupied"
+  },
+  { "code": "563", "description": "Att. Burglary, Forced Entry, Day, Garage" },
+  {
+    "code": "565",
+    "description": "Att. Burglary, Forced Entry, Day, Commercial"
+  },
+  {
+    "code": "566",
+    "description": "Att. Burglary, Forced Entry, Day, Commercial, Occupied"
+  },
+  { "code": "600", "description": "Theft, Except Auto Theft" },
+  {
+    "code": "601",
+    "description": "STOLEN AND RECOVERED PROPERTY VALUE LESS THAN $50"
+  },
+  { "code": "603", "description": "Theft - Mail/Package" },
+  { "code": "611", "description": "Theft, Pocket Picking, Under $500" },
+  { "code": "612", "description": "Theft, Pocket Picking, $501 to $1000" },
+  { "code": "613", "description": "Theft, Pocket Picking, Over $1000" },
+  { "code": "614", "description": "Other" },
+  { "code": "621", "description": "Theft, Purse Snatching, Under $500" },
+  { "code": "622", "description": "Theft, Purse Snatching, $501 to $1000" },
+  { "code": "623", "description": "Theft, Purse Snatching, Over $1000" },
+  { "code": "630", "description": "Theft, Shoplifting" },
+  { "code": "631", "description": "Theft, Shoplifting, Under $500" },
+  { "code": "632", "description": "Theft, Shoplifting, $501 to $1000" },
+  { "code": "633", "description": "Theft, Shoplifting, Over $1000" },
+  { "code": "640", "description": "Theft, From Auto" },
+  { "code": "641", "description": "Theft, From Auto, Under $500" },
+  { "code": "642", "description": "Theft, From Auto, $501 to $1000" },
+  { "code": "643", "description": "Theft, From Auto, Over $1000" },
+  { "code": "651", "description": "Theft, Auto Accessories, Under $500" },
+  { "code": "652", "description": "Theft, Auto Accessories, $501 to $1000" },
+  { "code": "653", "description": "Theft, Auto Accessories, Over $1000" },
+  { "code": "661", "description": "Theft, Bicycle Theft, Under $500" },
+  { "code": "662", "description": "Theft, Bicycle Theft, $501 to $1000" },
+  { "code": "663", "description": "Theft, Bicycle Theft, Over $1000" },
+  { "code": "671", "description": "Theft, From Building, Under $500" },
+  { "code": "672", "description": "Theft, From Building, $501 to $1000" },
+  { "code": "673", "description": "Theft, From Building, Over $1000" },
+  {
+    "code": "681",
+    "description": "Theft, From Coin Operated Device, Under $500"
+  },
+  {
+    "code": "682",
+    "description": "Theft, From Coin Operated Device, $501 to $1000"
+  },
+  {
+    "code": "683",
+    "description": "Theft, From Coin Operated Device, Over $1000"
+  },
+  { "code": "691", "description": "Theft, All Other, Under $500" },
+  { "code": "692", "description": "Theft, All Other, $501 to $1000" },
+  { "code": "693", "description": "Theft, All Other, Over $1000" },
+  { "code": "700", "description": "Motor Vehicle Theft" },
+  { "code": "710", "description": "Motor Vehicle Theft, Automobile" },
+  { "code": "711", "description": "Motor Vehicle Theft, Trucks and Buses" },
+  { "code": "712", "description": "Motor Vehicle Theft, All Other Vehicles" },
+  { "code": "720", "description": "Att. Motor Vehicle Theft, Automobile" },
+  {
+    "code": "721",
+    "description": "Att. Motor Vehicle Theft, Trucks and Buses"
+  },
+  {
+    "code": "722",
+    "description": "Att. Motor Vehicle Theft, All Other Vehicles"
+  },
+  {
+    "code": "730",
+    "description": "AUTO THEFT-OOC,STOLEN RECOVERED,AUTOMOBILES"
+  },
+  {
+    "code": "731",
+    "description": "AUTO THEFT-OOC,STOLEN RECOVERED,TRUCKS & BUSES"
+  },
+  {
+    "code": "732",
+    "description": "AUTO THEFT-OOC,STOLEN RECOVERED,ALL OTHER VEHICLES"
+  },
+  { "code": "810", "description": "Asasult, Domestic" },
+  { "code": "861", "description": "Assault, Domestic, Opposite Sex" },
+  { "code": "862", "description": "Assault, Domestic, Family/Child" },
+  { "code": "863", "description": "Assault, Domestic, Gross Misdemeanor" },
+  { "code": "900", "description": "Arson" },
+  {
+    "code": "901",
+    "description": "Arson, Residential, Single Occupancy, Endangering Life"
+  },
+  {
+    "code": "903",
+    "description": "Arson, Residential, Single Occupancy, Other"
+  },
+  {
+    "code": "905",
+    "description": "Arson, Residential, Single, Abandoned, Other"
+  },
+  {
+    "code": "911",
+    "description": "Arson, Residential, Multiple Occupancy, Endangering Life"
+  },
+  {
+    "code": "913",
+    "description": "Arson, Residential, Multiple Occupancy, Other"
+  },
+  {
+    "code": "915",
+    "description": "Arson, Residential, Multiple, Abandoned, Other"
+  },
+  {
+    "code": "921",
+    "description": "Arson, Commercial, Indust/Manu, Endangering Life"
+  },
+  {
+    "code": "922",
+    "description": "Arson, Commercial, Indust/Manu, Defraud Insurer"
+  },
+  { "code": "923", "description": "Arson, Commercial, Indust/Manu, Other" },
+  { "code": "925", "description": "Arson, Commercial, Indust/Manu, Other" },
+  { "code": "931", "description": "Arson, Other Commercial, Endangering Life" },
+  { "code": "933", "description": "Arson, Other Commercial, Other" },
+  {
+    "code": "941",
+    "description": "Arson, Community Building, Endangering Life"
+  },
+  { "code": "942", "description": "Arson, Community Building, Other" },
+  { "code": "951", "description": "Arson, Storage Building" },
+  { "code": "961", "description": "Arson, All Other Structures" },
+  { "code": "971", "description": "Arson, Motor Vehicle" },
+  { "code": "972", "description": "Arson, Motor Vehicle, Abandoned" },
+  { "code": "975", "description": "Arson, Other Mobile Property" },
+  { "code": "981", "description": "Arson, Not Structure" },
+  { "code": "982", "description": "Arson, Not Structure, Abandoned" },
+  { "code": "1400", "description": "Criminal Damage to Property" },
+  { "code": "1401", "description": "Graffiti" },
+  {
+    "code": "1410",
+    "description": "Criminal Damage to Property (Misdemeanor, Under $250)"
+  },
+  { "code": "1415", "description": "Graffiti (Misdemeanor, Under $250)" },
+  { "code": "1416", "description": "Graffiti-Gang (Misdemeanor, Under $250)" },
+  {
+    "code": "1420",
+    "description": "Criminal Damage to Property (Gross Mis., $250-$500)"
+  },
+  { "code": "1425", "description": "Graffiti (Gross Mis., $250-$500)" },
+  { "code": "1426", "description": "Graffiti-Gang (Gross Mis., $250-$500)" },
+  {
+    "code": "1430",
+    "description": "Criminal Damage to Property (Felony, Over $500)"
+  },
+  { "code": "1435", "description": "Graffiti (Felony, Over $500)" },
+  { "code": "1436", "description": "Graffiti-Gang (Felony, Over $500)" },
+  { "code": "1800", "description": "Narcotics" },
+  {
+    "code": "1810",
+    "description": "Narcotics, Possession of Opium or Cocaine"
+  },
+  { "code": "1811", "description": "Narcotics, Possession of Cocaine" },
+  { "code": "1812", "description": "Narcotics, Possession of Heroin" },
+  { "code": "1813", "description": "Narcotics, Possession of Methamphetamine" },
+  { "code": "1814", "description": "Narcotics, Possession of MDMA (Ecstasy)" },
+  {
+    "code": "1815",
+    "description": "Narcotics, Possession With Intent to Sell Cocaine"
+  },
+  {
+    "code": "1820",
+    "description": "Narcotics, Possession of Synthetic Narcotic, Demerol, Etc."
+  },
+  {
+    "code": "1822",
+    "description": "Narcotics, Possession With Intent to Sell Heroin"
+  },
+  {
+    "code": "1823",
+    "description": "Narcotics, Possession With Intent to Sell Methamphetamine"
+  },
+  {
+    "code": "1824",
+    "description": "Narcotics, Possession With Intent to Sell MDMA (Ecstasy)"
+  },
+  {
+    "code": "1825",
+    "description": "Narcotics, Possession With Intent to Sell Synthetics"
+  },
+  {
+    "code": "1830",
+    "description": "Narcotics, Possession of Dangerous Non-Narcotic Drugs"
+  },
+  { "code": "1835", "description": "Narcotics, Possession of Marijuana" },
+  { "code": "1840", "description": "Narcotics, Selling Opium, Cocaine, Etc." },
+  { "code": "1841", "description": "Narcotics, Selling Cocaine" },
+  { "code": "1842", "description": "Narcotics, Selling Heroin" },
+  { "code": "1843", "description": "Narcotics, Selling Methamphetamine" },
+  { "code": "1844", "description": "Narcotics, Selling MDMA (Ecstasy)" },
+  {
+    "code": "1845",
+    "description": "Narcotics, Possession With Intent to Sell Non-Narcotics"
+  },
+  { "code": "1850", "description": "Narcotics, Selling Synthetic Narcotics" },
+  {
+    "code": "1855",
+    "description": "Narcotics, Possession With Intent to Sell Marijuana"
+  },
+  {
+    "code": "1860",
+    "description": "Narcotics, Selling Dangerous Non-Narcotics"
+  },
+  { "code": "1865", "description": "Narcotics, Selling Marijuana" },
+  { "code": "1870", "description": "Narcotics, Possession of Inhalants" },
+  {
+    "code": "1880",
+    "description": "Narcotics, Possession of Narcotic Paraphernalia"
+  },
+  {
+    "code": "1885",
+    "description": "Narcotics, Loitering With Intent to Sell Narcotics"
+  },
+  {
+    "code": "2619",
+    "description": "Weapons, Discharging a Firearm in the City Limits"
+  },
+  { "code": "3100", "description": "DEATH-INVESTIGATION OF A DEATH" },
+  { "code": "9954", "description": "Proactive Police Visit" },
+  { "code": "9959", "description": "Community Engagement Event" },
+  { "code": "9986", "description": "Proactive Foot Patrol" }
+]

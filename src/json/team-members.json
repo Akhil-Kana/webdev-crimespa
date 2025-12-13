@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Zoe Thoma",
+    "description": "Computer Engineering Major with a Computer Science Minor",
+    "imgUrl": "/img/zoe_headshot.jpeg"
+  },
+  {
+    "name": "Cody Kyro",
+    "description": "Computer Engineering major at the University of St. Thomas.",
+    "imgUrl": "/img/cody.jpeg"
+  },
+  {
+    "name": "Team Member 3",
+    "description": "Add your bio here",
+    "imgUrl": "/img/placeholder.jpg"
+  }
+]

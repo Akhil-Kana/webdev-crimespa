@@ -1,0 +1,19 @@
+[
+  { "id": 1, "name": "Sunray-Battlecreek-Highwood" },
+  { "id": 2, "name": "Greater East Side" },
+  { "id": 3, "name": "West Side" },
+  { "id": 4, "name": "Dayton's Bluff" },
+  { "id": 5, "name": "Payne-Phalen" },
+  { "id": 6, "name": "North End" },
+  { "id": 7, "name": "Frogtown" },
+  { "id": 8, "name": "Summit-University" },
+  { "id": 9, "name": "West Seventh/Ford Road" },
+  { "id": 10, "name": "Como Park" },
+  { "id": 11, "name": "Hamline Midway" },
+  { "id": 12, "name": "Saint Anthony Park" },
+  { "id": 13, "name": "Union Park" },
+  { "id": 14, "name": "Macalester-Groveland" },
+  { "id": 15, "name": "Highland Park" },
+  { "id": 16, "name": "Summit Hill" },
+  { "id": 17, "name": "Downtown" }
+]

@@ -1,0 +1,16 @@
+[
+  { "label": "Homicide", "code_range": [100, 120] },
+  { "label": "Rape / Sexual Assault", "code_range": [210, 220] },
+  { "label": "Robbery", "code_range": [300, 374] },
+  { "label": "Aggravated Assault", "code_range": [400, 453] },
+  { "label": "Burglary", "code_range": [500, 566] },
+  { "label": "Theft (Non-Auto)", "code_range": [600, 693] },
+  { "label": "Motor Vehicle Theft", "code_range": [700, 732] },
+  { "label": "Assault (Domestic / Simple)", "code_range": [810, 863] },
+  { "label": "Arson", "code_range": [900, 982] },
+  { "label": "Criminal Damage / Graffiti", "code_range": [1400, 1436] },
+  { "label": "Narcotics", "code_range": [1800, 1885] },
+  { "label": "Weapons", "code_range": [2619, 2619] },
+  { "label": "Death Investigation", "code_range": [3100, 3100] },
+  { "label": "Community / Proactive Police", "code_range": [9954, 9986] }
+]
