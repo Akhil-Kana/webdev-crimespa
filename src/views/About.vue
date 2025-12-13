@@ -73,28 +73,28 @@ import TeamMembers from "../json/team-members.json";
       <h2>Interesting Findings</h2>
       <div class="findings-grid">
         <div class="finding-card">
-          <h4><span class="finding-number">1</span>Finding One</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">1</span>Time Patterns</h4>
+          <p>Violent crime often peaks at night time while theft peaks during business hours.</p>
         </div>
         <div class="finding-card">
-          <h4><span class="finding-number">2</span>Finding Two</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">2</span>Geography</h4>
+          <p>Theft and burglary cluster near commercial areas and transit hubs.</p>
         </div>
         <div class="finding-card">
-          <h4><span class="finding-number">3</span>Finding Three</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">3</span>Transit</h4>
+          <p>Crime near transit is highly predictable, often being robbery or theft.</p>
         </div>
         <div class="finding-card">
-          <h4><span class="finding-number">4</span>Finding Four</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">4</span>Alchohol Availablity</h4>
+          <p>Areas with more bars, liquor stores, and nightlife venues tend to show higher rates of assault, domestic violence, and other violent related crimes.</p>
         </div>
         <div class="finding-card">
-          <h4><span class="finding-number">5</span>Finding Five</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">5</span>Reporting Bias</h4>
+          <p>Many crimes, like sexual assault and domestic violence, are often underreported.</p>
         </div>
         <div class="finding-card">
-          <h4><span class="finding-number">6</span>Finding Six</h4>
-          <p>Description of interesting finding from crime data analysis.</p>
+          <h4><span class="finding-number">6</span>Weather</h4>
+          <p>Midday tends to have warmer weather which correlates with increased outdoor and violent crime.</p>
         </div>
       </div>
     </div>
