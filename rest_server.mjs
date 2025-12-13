@@ -50,10 +50,7 @@ function dbRun(query, params) {
   });
 }
 
-/********************************************************************
- ***   REST REQUEST HANDLERS                                      ***
- ********************************************************************/
-// GET request handler for crime codes - Angelika
+
 app.get("/codes", (req, res) => {
   console.log(req.query); // query object (key-value pairs after the ? in the url)
 
@@ -97,7 +94,7 @@ app.get("/codes", (req, res) => {
     });
 });
 
-// GET request handler for neighborhoods - Sam
+// GET request handler for neighborhoods
 app.get("/neighborhoods", (req, res) => {
   console.log(req.query); // query object(key-value pairs after the ? in the url)
   const id = req.query.id;
@@ -138,7 +135,7 @@ app.get("/neighborhoods", (req, res) => {
     });
 });
 
-// GET request handler for crime incidents - Harrison
+// GET request handler for crime incidents
 app.get("/incidents", (req, res) => {
   console.log(req.query); // query object (key-value pairs after the ? in the url)
   const startDate = req.query.start_date;
@@ -225,7 +222,7 @@ app.get("/incidents", (req, res) => {
     });
 });
 
-// PUT request handler for new crime incident - Sam
+// PUT request handler for new crime incident
 app.put("/new-incident", (req, res) => {
   console.log(req.body); // uploaded data
 
@@ -289,7 +286,7 @@ app.put("/new-incident", (req, res) => {
     });
 });
 
-// DELETE request handler for new crime incident - Harrison
+// DELETE request handler for new crime incident
 app.delete("/remove-incident", (req, res) => {
   console.log(req.body); // uploaded data
   const caseNumber = req.body.case_number;

@@ -89,9 +89,38 @@ function formatTimeString(timeStr) {
 }
 
 function replaceAddressXs(address) {
-  const addressParts = address.split(" ");
+  let result = address;
+  
+  // Fix missing spaces in common street names (do this first)
+  result = result.replace(/MISSISSIPPIRIVER/gi, "MISSISSIPPI RIVER");
+  
+  // Expand common abbreviations for better geocoding
+  result = result.replace(/\bBLVD\b/gi, "Boulevard");
+  result = result.replace(/\bAVE\b/gi, "Avenue");
+  result = result.replace(/\bST\b(?!\s+PAUL)/gi, "Street");  // But not "ST PAUL"
+  result = result.replace(/\bRD\b/gi, "Road");
+  result = result.replace(/\bDR\b/gi, "Drive");
+  result = result.replace(/\bLN\b/gi, "Lane");
+  result = result.replace(/\bCT\b/gi, "Court");
+  result = result.replace(/\bPL\b/gi, "Place");
+  result = result.replace(/\bPKWY\b/gi, "Parkway");
+  
+  // Expand directional abbreviations at the end
+  result = result.replace(/\bN$/gi, "North");
+  result = result.replace(/\bS$/gi, "South");
+  result = result.replace(/\bE$/gi, "East");
+  result = result.replace(/\bW$/gi, "West");
+  result = result.replace(/\bNE$/gi, "Northeast");
+  result = result.replace(/\bNW$/gi, "Northwest");
+  result = result.replace(/\bSE$/gi, "Southeast");
+  result = result.replace(/\bSW$/gi, "Southwest");
+  
+  // Then replace Xs with 0s in the street number
+  const addressParts = result.split(" ");
   addressParts[0] = addressParts[0].replaceAll("X", "0");
-  return addressParts.join(" ");
+  result = addressParts.join(" ");
+  
+  return result;
 }
 
 // Category determination
@@ -147,6 +176,19 @@ function locateIncident(incident) {
     .then((response) => response.json())
     .then((results) => {
       console.log(results);
+      
+      if (results.length === 0) {
+        // Try without house number as fallback
+        const addressParts = cleanAddress.split(" ");
+        const streetOnly = addressParts.slice(1).join(" ") + ", St. Paul, MN";
+        console.log("Trying fallback:", streetOnly);
+        
+        return fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(streetOnly)}&format=jsonv2`)
+          .then(response => response.json());
+      }
+      return results;
+    })
+    .then((results) => {
       const firstResult = results[0];
       
       if (!firstResult) {
