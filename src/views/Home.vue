@@ -12,7 +12,7 @@ import DateFilter from "../components/DateFilter.vue";
 import incidentTypes from "../json/incident-types.json";
 import neighborhoods from "../json/neighborhoods.json";
 
-let crime_url = ref("");
+let crime_url = ref("http://localhost:8000");
 
 // init neighborhood number crime sums to 0
 let sums = {};
