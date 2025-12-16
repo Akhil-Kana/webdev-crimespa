@@ -59,13 +59,13 @@ import TeamMembers from "../json/team-members.json";
       <h2>Video Demonstration</h2>
       <div class="video-container">
         <iframe
-          src="https://www.youtube.com/embed/Ofv0dCpwCUQ"
+          src="https://youtu.be/dlRdPw2RyuI"
           title="Project Demo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
       </div>
-      <p class="help-text">Replace the video URL with your actual demo video</p>
+      <p class="help-text">Video Demonstration of this Website's Capabilities</p>
     </div>
 
     <!-- Findings Section -->
